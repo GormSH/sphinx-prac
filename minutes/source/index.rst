@@ -13,7 +13,7 @@ Edit data: 2023-08-27
    :maxdepth: 2
    :caption: Contents:
 
-How to write Sections
+Sections
 ================================================
 
 When writing header text(htags in html), use multiple ``=`` or ``-`` characters.::
@@ -32,26 +32,6 @@ When writing header text(htags in html), use multiple ``=`` or ``-`` characters.
    Section text v4
    ------------------------------------------------
 
-The result of above looks like this.
-
-*****(result start)*****
-
-================================================
-Section text v1
-================================================
-
-Section text v2
-================================================
-
-------------------------------------------------
-Sevtion text v3
-------------------------------------------------
-
-Section text v4
-------------------------------------------------
-
-*****(result end)*****
-
 | The number of ``=`` or ``-`` must be greater or equal to that of the section text.  
   And the order of appearence becomes the order of section level.  
 | In the example above,
@@ -61,10 +41,44 @@ Section text v4
 * text surrounded by two ``-`` lines(v3) => h3
 * one ``-`` line(v4) => h4
 
-Indices and tables
-==================
+Lists & Sublists
+================================================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. list and sublist
 
+* list1
+
+  * sublist1-1
+  * sublist1-2
+
+* list2
+
+  * sublist2-1
+
+    * subsublist2-1-1
+
+Inline codes
+================================================
+
+| *Italic text* by surrounding with ``*``.
+| **Bold text** by surrounding with ``**``.  
+| ``Literal text`` by surrounding with \`.  
+
+Hyper links
+================================================
+
+| To use hyper links, use back quotes and inequality signs.
+| For example, a link to google would be something like this. ::
+
+  \`This is a link to google v1 <https://google.com>\`__
+
+`This is a link to google v1 <https://google.com>`__
+
+If the url is too long or used often, give it a name and use it anywhere. ::
+  
+  .. _This is a link to google: https://google.com
+  \`This is a link to google v2\`_
+
+`This is a link to google v2`_
+
+.. _This is a link to google v2: https://google.com
